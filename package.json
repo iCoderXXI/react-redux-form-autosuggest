@@ -1,0 +1,33 @@
+{
+  "name": "form3",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "0.7.0"
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "bootstrap": "^3.3.7",
+    "lodash": "^4.17.2",
+    "material-ui": "^0.16.4",
+    "react": "^15.4.1",
+    "react-addons-css-transition-group": "^15.4.1",
+    "react-addons-transition-group": "^15.4.1",
+    "react-autosuggest": "^7.0.1",
+    "react-bootstrap": "^0.30.7",
+    "react-dom": "^15.4.1",
+    "react-redux": "^4.4.6",
+    "reactstrap": "^3.9.3",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.7.4",
+    "redux-promise-middleware": "^4.2.0",
+    "redux-thunk": "^2.1.0",
+    "uuid": "^3.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

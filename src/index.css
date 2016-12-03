@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.app-container {
+  min-width: 250px;
+  width: 350px;
+  margin: 0 20px;
+}
+
+.professionInput {
+  color: green;
+}
+
+.list-group-item:hover {
+  background-color: #eef !important;
+}
+
+.professionsContainer {
+  position: relative;
+  z-index: 9999;
+}
+
+.list-group {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  margin-top: -16px;
+  width: 100%;
+}
+
+.list-group-item:first-child {
+}
+
+.form-control {
+  //z-index: 9999;
+  position: relative;
+}
