@@ -6,30 +6,35 @@ export default class TextInput extends Component {
     this.props.inputChange(e.target.value);
   }
 
-  handleKeyEvent(e, handlerName) {
-    e.preventDefault();
+  handleEvent(e, handlerName, preventDefault = true) {
+    if (preventDefault) e.preventDefault();
     if (typeof this.props[handlerName] === 'function') {
       this.props[handlerName]();
     }
+  }
+
+  handleBlur(e) {
+    this.handleEvent(e, 'onBlur', false);
+    return true;
   }
 
   handleKeyPress(e) {
     //console.log(e.keyCode);
     switch(e.keyCode) {
       case 13: //KeyENTER
-        this.handleKeyEvent(e, 'onKeyENTER')
+        this.handleEvent(e, 'onKeyENTER')
         return true;
 
       case 27: //KeyESCAPE
-        this.handleKeyEvent(e, 'onKeyESC')
+        this.handleEvent(e, 'onKeyESC')
         return true;
 
       case 38: //KeyUP
-        this.handleKeyEvent(e, 'onKeyUP')
+        this.handleEvent(e, 'onKeyUP')
         return true;
 
       case 40: //KeyDOWN
-        this.handleKeyEvent(e, 'onKeyDOWN')
+        this.handleEvent(e, 'onKeyDOWN')
         return true;
 
       default:
@@ -50,6 +55,7 @@ export default class TextInput extends Component {
           name={this.props.id}
           placeholder={this.props.placeholder}
           onKeyDown={this.handleKeyPress.bind(this)}
+          onBlur={this.handleBlur.bind(this)}
         />
       </FormGroup>
     );

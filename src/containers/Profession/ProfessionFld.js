@@ -29,6 +29,7 @@ export default connect(
         onKeyDOWN: nextProfession,
         onKeyENTER: selectCurrentProfession,
         onKeyESC: cancelProfession,
+        onBlur: cancelProfession,
       }, dispatch
     );
   }
