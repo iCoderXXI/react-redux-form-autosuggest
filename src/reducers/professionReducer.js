@@ -51,6 +51,7 @@ export default (state=initialState.profession, action) => {
         };
 
       case 'SELECT_PROFESSION':
+        console.log('Click detected');
         return {
           ...state,
           id: action.payload,
@@ -60,13 +61,18 @@ export default (state=initialState.profession, action) => {
         };
 
       case 'CANCEL_PROFESSION':
-        return {
-          ...state,
-          id: null,
-          listShow: false,
-          list: false,
-          currentListItemId: null
-        };
+        if (state.listShow) {
+          return {
+            ...state,
+            id: null,
+            listShow: false,
+            list: false,
+            currentListItemId: null
+          };
+        } else {
+          console.log('Blur via click detected');
+          return state;
+        }
 
 
       case 'SELECT_CURRENT_PROFESSION':

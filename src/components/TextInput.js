@@ -14,7 +14,12 @@ export default class TextInput extends Component {
   }
 
   handleBlur(e) {
-    this.handleEvent(e, 'onBlur', false);
+    console.log('Blur detected');
+    const deferred = (evt, that) => {
+      console.log('Blur proceeded');
+      that.handleEvent(evt, 'onBlur', false);
+    }
+    setTimeout( deferred, 1000, e, this );
     return true;
   }
 
