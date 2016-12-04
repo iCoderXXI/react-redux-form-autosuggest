@@ -38,3 +38,12 @@ body {
   //z-index: 9999;
   position: relative;
 }
+
+.flag-container {
+  display: inline-block;
+  height: 20px;
+}
+
+.flag-container img {
+  height: inherit;
+}

@@ -18,7 +18,6 @@ export default (state=initialState.phone, action) => {
         return {
           ...state,
           phone: phoneFormat(action.payload, state.phoneCode),
-          listShow: false
         }
 
       case 'SELECT_COUNTRY':
@@ -27,14 +26,7 @@ export default (state=initialState.phone, action) => {
           ...state,
           countryId: action.payload,
           phoneCode: state.data[action.payload].phoneCode,
-          listShow: false
         };
-
-      case 'COUNTRY_LIST_SHOW':
-        return {
-          ...state,
-          listShow: true
-        }
 
       default:
         return state;

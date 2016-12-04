@@ -11,9 +11,3 @@ export function selectCountry(countryId) {
     payload: countryId,
   }
 }
-
-export function countriesListShow() {
-  return {
-    type: 'COUNTRY_LIST_SHOW',
-  }
-}

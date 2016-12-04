@@ -17,9 +17,8 @@ export default {
   },
   phone: {
     countryId: 'RU',
-    countryCode: countries['RU'].phoneCode,
+    phoneCode: countries['RU'].phoneCode,
     phone: '',
-    listShow: false,
     data: countries
     // {
     //    ...,

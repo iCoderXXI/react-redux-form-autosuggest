@@ -7,15 +7,24 @@ import store from "./store"
 
 import "./index.css";
 
-store.dispatch({
-  type: "SET_PROFESSION",
-  payload: 'админ'
-})
-
+// store.dispatch({
+//   type: "SET_PROFESSION",
+//   payload: 'админ'
+// })
+//
 // store.dispatch({
 //   type: "NEXT_PROFESSION",
 // })
-// 
+//
+// store.dispatch({
+//   type: "NEXT_PROFESSION",
+// })
+//
+// store.dispatch({
+//   type: "SELECT_CURRENT_PROFESSION",
+// })
+
+//
 // store.dispatch({
 //   type: "PREV_PROFESSION",
 // })
