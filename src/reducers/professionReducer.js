@@ -26,7 +26,7 @@ const getListKey = (list, currKey, direction = 0) => {
   const keys = Object.getOwnPropertyNames(list);
   let newKey = currKey;
   let index = currKey ? keys.indexOf(currKey) : -1;
-  console.log('getListKey: ', currKey, index, keys);
+  // console.log('getListKey: ', currKey, index, keys);
   if (index>=0) {
     // key found
     index = direction>0 ? index+1 : index-1;
@@ -36,7 +36,7 @@ const getListKey = (list, currKey, direction = 0) => {
     index = direction>0 ? 0 : keys.length-1;
   }
   newKey = keys[index];
-  console.log('getListKey: ', currKey, index, newKey);
+  // console.log('getListKey: ', currKey, index, newKey);
   return newKey;
 }
 
@@ -51,7 +51,7 @@ export default (state=initialState.profession, action) => {
         };
 
       case 'SELECT_PROFESSION':
-        console.log('Click detected');
+        // console.log('Click detected');
         return {
           ...state,
           id: action.payload,
@@ -70,7 +70,7 @@ export default (state=initialState.profession, action) => {
             currentListItemId: null
           };
         } else {
-          console.log('Blur via click detected');
+          // console.log('Blur via click detected');
           return state;
         }
 

@@ -3,17 +3,17 @@ import initialState from '../data/initialState';
 import { phoneClean } from './phoneReducer';
 
 const validateForm = (state) => {
-  const userName = state.user.name.trim();
+  const userName = ''+state.user.name.trim();
   if(userName.length<2) {
     return {...state, user: {...state.user, errorName: true} }
   }
 
-  const userSurname = state.user.surName.trim();
+  const userSurname = ''+state.user.surName.trim();
   if(userSurname.length<2) {
     return {...state, user: {...state.user, errorSurname: true} }
   }
 
-  const profession = state.profession.val.trim();
+  const profession = ''+state.profession.val.trim();
   if(profession.length<5) {
     return {
       ...state,

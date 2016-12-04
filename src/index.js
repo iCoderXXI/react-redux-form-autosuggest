@@ -7,14 +7,37 @@ import store from "./store"
 
 import "./index.css";
 
+// store.dispatch({
+//   type: "SET_PHONE",
+//   payload: '9676348120',
+// })
+
 store.dispatch({
-  type: "SET_PHONE",
-  payload: '9676348120',
+  type: "SET_USER_NAME",
+  payload: 'iCoder',
 })
 
 store.dispatch({
-  type: "SUBMIT_FORM",
+  type: "SET_USER_SURNAME",
+  payload: 'XXI',
 })
+
+store.dispatch({
+  type: "SET_PROFESSION",
+  payload: 'WEB',
+})
+
+store.dispatch({
+  type: "PREV_PROFESSION",
+})
+
+store.dispatch({
+  type: "SELECT_CURRENT_PROFESSION",
+})
+
+// store.dispatch({
+//   type: "SUBMIT_FORM",
+// })
 
 // store.dispatch({
 //   type: "USER_NAME_ERROR_ON",

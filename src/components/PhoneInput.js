@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import {
   Row,
   Col,
@@ -20,6 +21,13 @@ export default class PhoneInput extends Component {
       console.log('this.props.phoneChange handler is not set for PhoneInput coomponent');
     }
   }
+  componentDidUpdate() {
+    console.log(this);
+    if (this.props.error) {
+      console.log(this);
+      ReactDOM.findDOMNode(this.refs[this.props.id]).focus();
+    }
+  }
   render() {
     return (
       <Row>
@@ -38,7 +46,8 @@ export default class PhoneInput extends Component {
                 }
                 value={this.props.phone || ""}
                 onChange={this.phoneChange.bind(this)}
-                id="phone"
+                id={this.props.id}
+                ref={this.props.id}
               />
             </InputGroup>
           </FormGroup>

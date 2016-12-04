@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
 
 export default class TextInput extends Component {
@@ -14,9 +15,9 @@ export default class TextInput extends Component {
   }
 
   handleBlur(e) {
-    console.log('Blur detected');
+    // console.log('Blur detected');
     const deferred = (evt, that) => {
-      console.log('Blur proceeded');
+      // console.log('Blur proceeded');
       that.handleEvent(evt, 'onBlur', false);
     }
     setTimeout( deferred, 1000, e, this );
@@ -47,11 +48,11 @@ export default class TextInput extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   if (this.props.error) {
-  //    React.findDOMNode(this.refs[this.props.id]).focus();
-  //   }
-  // }
+  componentDidUpdate() {
+    if (this.props.error) {
+      ReactDOM.findDOMNode(this.refs[this.props.id]).focus();
+    }
+  }
 
   render() {
     // console.log('Render TextInput: ',this.props);
