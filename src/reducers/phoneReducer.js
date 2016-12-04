@@ -49,7 +49,8 @@ export default (state=initialState.phone, action) => {
           phoneCode: state.data[action.payload].phoneCode,
           placeHolder: state.placeHolders[
             state.data[action.payload].phoneCode.length
-          ]
+          ],
+          phone: phoneFormat(state.phone, state.data[action.payload].phoneCode),
         };
 
       default:

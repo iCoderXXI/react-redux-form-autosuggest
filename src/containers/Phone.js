@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { setPhone } from '../actions/phoneActions';
+import { setPhone, selectCountry } from '../actions/phoneActions';
 import PhoneInput from '../components/PhoneInput';
 
 export default connect(
@@ -14,7 +14,10 @@ export default connect(
   },
   (dispatch) => {
     return bindActionCreators(
-      {phoneChange: setPhone}, dispatch
+      {
+        phoneChange: setPhone,
+        countryChange: selectCountry
+      }, dispatch
     );
   }
 )(PhoneInput);
