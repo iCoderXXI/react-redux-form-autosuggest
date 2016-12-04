@@ -7,20 +7,20 @@ import store from "./store"
 
 import "./index.css";
 
-store.dispatch({
-  type: "SET_PHONE",
-  payload: '9676348120',
-})
+// store.dispatch({
+//   type: "SET_PHONE",
+//   payload: '9999999999',
+// })
 
-store.dispatch({
-  type: "SET_USER_NAME",
-  payload: 'iCoder',
-})
-
-store.dispatch({
-  type: "SET_USER_SURNAME",
-  payload: 'XXI',
-})
+// store.dispatch({
+//   type: "SET_USER_NAME",
+//   payload: 'iCoder',
+// })
+//
+// store.dispatch({
+//   type: "SET_USER_SURNAME",
+//   payload: 'XXI',
+// })
 
 // store.dispatch({
 //   type: "SET_PROFESSION",
