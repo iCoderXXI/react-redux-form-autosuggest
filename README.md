@@ -14,6 +14,6 @@
 
 Остальную информаицю гуглим по ключу create-react-app
 
-С флагами следующий нюанс: необходимо либо линкануть ./node_modules/react-flags/vendor/flags в ./public/img/flags, либо просто скопировать.
+С флагами следующий нюанс: необходимо либо линкануть `./node_modules/react-flags/vendor/flags` в `./public/img/flags`, либо просто скопировать.
 
-Для Linux систем можно воспользоваться командой ln -s ./node_modules/react-flags/vendor/flags ./public/img/flags
+Для Linux систем можно воспользоваться командой `ln -s ./node_modules/react-flags/vendor/flags ./public/img/flags`
