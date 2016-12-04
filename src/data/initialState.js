@@ -19,7 +19,15 @@ export default {
     countryId: 'RU',
     phoneCode: countries['RU'].phoneCode,
     phone: '',
-    data: countries
+    data: countries,
+    placeHolder: '999 999 99 99',
+    placeHolders: {
+      1: '999 999 99 99',
+      2: '99 999 99 99',
+      3: '9 999 99 99',
+      4: ' 999 99 99',
+      5: '99 99 99',
+    }
     // {
     //    ...,
     //    "RU": {

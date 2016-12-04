@@ -3,8 +3,7 @@ import { Row } from 'react-bootstrap';
 
 import UserInput from '../containers/UserInput';
 import Profession from '../containers/Profession/Profession';
-import PhoneInput from './PhoneInput';
-// import Countries from '../containers/Countries';
+import Phone from '../containers/Phone';
 
 export default class App extends Component {
   render() {
@@ -17,7 +16,7 @@ export default class App extends Component {
           <Profession />
         </Row>
         <Row>
-          <PhoneInput />
+          <Phone />
         </Row>
       </div>
     );

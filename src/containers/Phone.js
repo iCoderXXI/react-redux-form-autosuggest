@@ -1,11 +1,20 @@
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
-import TextInput from '../components/TextInput';
+import { setPhone } from '../actions/phoneActions';
+import PhoneInput from '../components/PhoneInput';
 
 export default connect(
-  (store) => {
+  (state) => {
     return {
-      listShow: store.phone.listShow,
+      phoneCode: state.phone.phoneCode,
+      phone: state.phone.phone,
+      placeHolder: state.phone.placeHolder,
     };
+  },
+  (dispatch) => {
+    return bindActionCreators(
+      {phoneChange: setPhone}, dispatch
+    );
   }
-)(TextInput);
+)(PhoneInput);
