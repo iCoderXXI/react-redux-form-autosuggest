@@ -51,10 +51,10 @@ export default class User extends Component {
   render() {
     return (
       <Row>
-        <Col { ...colDimensions }>
+        <Col { ...colDimensions } className="form-group">
           <UserName />
         </Col>
-        <Col { ...colDimensions }>
+        <Col { ...colDimensions } className="form-group">
           <UserSurname />
         </Col>
       </Row>

@@ -23,13 +23,12 @@ export default class PhoneInput extends Component {
   render() {
     return (
       <Row>
-        <Col { ...colDimensions }>
+        <Col { ...colDimensions } className="form-group">
           <FormGroup
-            bsSize="large"
             validationState={this.props.error ? "error" : null}
           >
             <ControlLabel>{this.props.label}</ControlLabel>
-            <InputGroup>
+            <InputGroup bsSize="large">
               <CountrySelector />
               <InputGroup.Addon>+{this.props.phoneCode || "7"}</InputGroup.Addon>
               <FormControl

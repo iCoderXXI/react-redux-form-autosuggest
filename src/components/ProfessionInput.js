@@ -16,7 +16,7 @@ export default class ProfessionInput extends Component {
     const professions = this.props.listShow ? <ProfessionsSuggest /> : null;
     return (
       <Row>
-        <Col { ...colDimensions }>
+        <Col { ...colDimensions } className="form-group">
           <ProfessionFld className="profession-fld"/>
           {professions}
         </Col>

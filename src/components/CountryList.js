@@ -12,7 +12,7 @@ const flag = (code = "RU") => {
       <Flag
         name={code}
         format="png"
-        pngSize={24}
+        pngSize={64}
         shiny={true}
       />
     </div>
@@ -58,6 +58,7 @@ export default class CountryList extends Component {
         id="input-dropdown-addon"
         title={flag(this.props.countryId || 'RU')}
         bsStyle={this.props.error ? "danger" : "default"}
+        className="flag-btn"
       >
         {
           countryList(
