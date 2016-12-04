@@ -53,6 +53,7 @@ export default class CountryList extends Component {
 
     return (
       <DropdownButton
+        bsSize="large"
         componentClass={InputGroup.Button}
         id="input-dropdown-addon"
         title={flag(this.props.countryId || 'RU')}

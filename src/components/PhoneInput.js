@@ -24,7 +24,7 @@ export default class PhoneInput extends Component {
     return (
       <Row>
         <Col { ...colDimensions }>
-          <FormGroup>
+          <FormGroup bsSize="large">
             <ControlLabel>{this.props.label}</ControlLabel>
             <InputGroup>
               <CountrySelector />

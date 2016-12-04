@@ -50,7 +50,7 @@ export default class TextInput extends Component {
   render() {
     // console.log('Render TextInput: ',this.props);
     return (
-      <FormGroup>
+      <FormGroup bsSize="large">
         <ControlLabel>{this.props.label || ""}</ControlLabel>
         <FormControl
           type="text"
