@@ -12,13 +12,13 @@ import {
 import TextInput from '../../components/TextInput';
 
 export default connect(
-  (store) => {
+  (state) => {
     return {
-      text: store.profession.val,
+      text: state.profession.val,
       id: 'profession',
-      label: 'Профессия',
+      label: state.profession.title,
       placeholder: 'Введите профессию',
-      currentListItemId: store.profession.currentListItemId
+      currentListItemId: state.profession.currentListItemId
     };
   },
   (dispatch) => {
@@ -34,5 +34,3 @@ export default connect(
     );
   }
 )(TextInput);
-
-// export default ProfessionFld;

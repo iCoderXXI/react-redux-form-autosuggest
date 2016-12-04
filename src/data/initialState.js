@@ -12,10 +12,12 @@ export default {
     data: professions,
     listShow: false,
     currentListItemId: null,
-    list: {}
+    list: {},
+    title: 'ПРОФЕССИЯ',
     // [ ..., "IT-специалист", ... ]
   },
   phone: {
+    title: 'ТЕЛЕФОН',
     countryId: 'RU',
     phoneCode: countries['RU'].phoneCode,
     phone: '',

@@ -51,7 +51,7 @@ export default class TextInput extends Component {
     // console.log('Render TextInput: ',this.props);
     return (
       <FormGroup>
-        <ControlLabel>{this.props.label}</ControlLabel>
+        <ControlLabel>{this.props.label || ""}</ControlLabel>
         <FormControl
           type="text"
           onChange={this.handleChange.bind(this)}

@@ -10,6 +10,7 @@ export default connect(
       phoneCode: state.phone.phoneCode,
       phone: state.phone.phone,
       placeHolder: state.phone.placeHolder,
+      label: state.phone.title,
     };
   },
   (dispatch) => {

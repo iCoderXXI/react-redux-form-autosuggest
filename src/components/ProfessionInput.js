@@ -24,5 +24,3 @@ export default class ProfessionInput extends Component {
     )
   }
 }
-
-// export default ProfessionInput;

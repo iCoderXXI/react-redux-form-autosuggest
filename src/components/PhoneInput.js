@@ -5,6 +5,7 @@ import {
   FormGroup,
   InputGroup,
   FormControl,
+  ControlLabel,
 } from 'react-bootstrap';
 
 import CountrySelector from "../containers/CountrySelector";
@@ -24,6 +25,7 @@ export default class PhoneInput extends Component {
       <Row>
         <Col { ...colDimensions }>
           <FormGroup>
+            <ControlLabel>{this.props.label}</ControlLabel>
             <InputGroup>
               <CountrySelector />
               <InputGroup.Addon>+{this.props.phoneCode || "7"}</InputGroup.Addon>
@@ -31,7 +33,7 @@ export default class PhoneInput extends Component {
                 type="text"
                 placeholder={
                   this.props.placeHolder || "999 999 99 99"
-                } 
+                }
                 value={this.props.phone || ""}
                 onChange={this.phoneChange.bind(this)}
               />
