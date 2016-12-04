@@ -5,6 +5,8 @@ export default {
   user: {
     name: '',
     surname: '',
+    errorName: false,
+    errorSurname: false,
   },
   profession: {
     val: '',
@@ -14,6 +16,7 @@ export default {
     currentListItemId: null,
     list: {},
     title: 'ПРОФЕССИЯ',
+    errorProfession: false,
     // [ ..., "IT-специалист", ... ]
   },
   phone: {
@@ -29,7 +32,8 @@ export default {
       3: '9 999 99 99',
       4: ' 999 99 99',
       5: '99 99 99',
-    }
+    },
+    errorPhone: false,
     // {
     //    ...,
     //    "RU": {

@@ -51,3 +51,11 @@ body {
 .row {
   margin-bottom: 5px;
 }
+
+#phone {
+  border-left: none;
+}
+
+.has-error .input-group-addon {
+  border-right: none;
+}

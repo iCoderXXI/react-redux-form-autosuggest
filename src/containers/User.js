@@ -12,7 +12,8 @@ export const UserName = connect(
       text: state.user.name,
       id: 'name',
       label: 'ИМЯ',
-      placeholder: 'Введите имя'
+      placeholder: 'Введите имя',
+      error: state.user.errorName
     };
   },
   (dispatch) => {
@@ -28,7 +29,8 @@ export const UserSurname = connect(
       text: state.user.surName,
       id: 'surname',
       label: 'ФАМИЛИЯ',
-      placeholder: 'Введите фамилию'
+      placeholder: 'Введите фамилию',
+      error: state.user.errorSurname,
     };
   },
   (dispatch) => {

@@ -57,6 +57,7 @@ export default class CountryList extends Component {
         componentClass={InputGroup.Button}
         id="input-dropdown-addon"
         title={flag(this.props.countryId || 'RU')}
+        bsStyle={this.props.error ? "danger" : "default"}
       >
         {
           countryList(

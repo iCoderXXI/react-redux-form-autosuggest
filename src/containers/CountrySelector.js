@@ -9,6 +9,7 @@ export default connect(
     return {
       list: state.phone.data,
       countryId: state.phone.countryId,
+      error: state.phone.errorPhone,
     };
   },
   (dispatch) => {

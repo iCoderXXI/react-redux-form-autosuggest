@@ -11,6 +11,7 @@ export default connect(
       phone: state.phone.phone,
       placeHolder: state.phone.placeHolder,
       label: state.phone.title,
+      error: state.phone.errorPhone
     };
   },
   (dispatch) => {

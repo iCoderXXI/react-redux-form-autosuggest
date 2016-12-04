@@ -53,6 +53,18 @@ export default (state=initialState.phone, action) => {
           phone: phoneFormat(state.phone, state.data[action.payload].phoneCode),
         };
 
+      case 'PHONE_ERROR_ON':
+        return {
+          ...state,
+          errorPhone: true,
+        }
+
+      case 'PHONE_ERROR_OFF':
+        return {
+          ...state,
+          errorPhone: false,
+        }
+
       default:
         return state;
     }

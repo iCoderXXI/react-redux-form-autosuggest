@@ -18,7 +18,8 @@ export default connect(
       id: 'profession',
       label: state.profession.title,
       placeholder: 'Введите профессию',
-      currentListItemId: state.profession.currentListItemId
+      currentListItemId: state.profession.currentListItemId,
+      error: state.profession.errorProfession
     };
   },
   (dispatch) => {

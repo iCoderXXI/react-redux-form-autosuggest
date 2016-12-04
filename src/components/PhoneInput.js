@@ -24,7 +24,10 @@ export default class PhoneInput extends Component {
     return (
       <Row>
         <Col { ...colDimensions }>
-          <FormGroup bsSize="large">
+          <FormGroup
+            bsSize="large"
+            validationState={this.props.error ? "error" : null}
+          >
             <ControlLabel>{this.props.label}</ControlLabel>
             <InputGroup>
               <CountrySelector />
@@ -36,6 +39,7 @@ export default class PhoneInput extends Component {
                 }
                 value={this.props.phone || ""}
                 onChange={this.phoneChange.bind(this)}
+                id="phone"
               />
             </InputGroup>
           </FormGroup>

@@ -7,11 +7,22 @@ import store from "./store"
 
 import "./index.css";
 
-// store.dispatch({
-//   type: "SET_PROFESSION",
-//   payload: 'админ'
-// })
-//
+store.dispatch({
+  type: "USER_NAME_ERROR_ON",
+})
+
+store.dispatch({
+  type: "USER_SURNAME_ERROR_ON",
+})
+
+store.dispatch({
+  type: "PROFESSION_ERROR_ON",
+})
+
+store.dispatch({
+  type: "PHONE_ERROR_ON",
+})
+
 // store.dispatch({
 //   type: "NEXT_PROFESSION",
 // })

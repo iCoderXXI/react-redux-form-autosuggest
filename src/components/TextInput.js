@@ -50,7 +50,10 @@ export default class TextInput extends Component {
   render() {
     // console.log('Render TextInput: ',this.props);
     return (
-      <FormGroup bsSize="large">
+      <FormGroup
+        bsSize="large"
+        validationState={this.props.error ? "error" : null}
+      >
         <ControlLabel>{this.props.label || ""}</ControlLabel>
         <FormControl
           type="text"

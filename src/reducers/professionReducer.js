@@ -115,6 +115,19 @@ export default (state=initialState.profession, action) => {
           )
         };
 
+      case 'PROFESSION_ERROR_ON':
+        return {
+          ...state,
+          errorProfession: true,
+        }
+
+
+      case 'PROFESSION_ERROR_OFF':
+        return {
+          ...state,
+          errorProfession: false,
+        }
+
       default:
         return state;
     }

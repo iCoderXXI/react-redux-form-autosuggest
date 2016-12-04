@@ -35,3 +35,15 @@ export function nextProfession() {
     type: 'NEXT_PROFESSION',
   }
 }
+
+export function professionErrorOn() {
+  return {
+    type: 'PROFESSION_ERROR_ON',
+  }
+}
+
+export function professionErrorOff() {
+  return {
+    type: 'PROFESSION_ERROR_OFF',
+  }
+}
