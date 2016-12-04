@@ -1,14 +1,22 @@
-import { combineReducers} from "redux";
+import { combineReducers } from "redux";
 
 import userReducer from './userReducer';
 import phoneReducer from './phoneReducer';
 import professionReducer from './professionReducer';
+import submitReducer from './submitReducer';
 
-export default combineReducers({
+const combinedReducers = combineReducers({
   user: userReducer,
   phone: phoneReducer,
-  profession: professionReducer
-})
+  profession: professionReducer,
+});
+
+export default (state, action) => {
+  return submitReducer(
+    combinedReducers(state, action),
+    action
+  );
+}
 
 /*
   reducers/actions:

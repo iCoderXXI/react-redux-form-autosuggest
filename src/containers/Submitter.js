@@ -6,7 +6,11 @@ import SubmitButton from '../components/SubmitButton';
 
 export default connect(
   (state) => {
-    return {};
+    return {
+    //   user: state.user,
+    //   profession: state.profession,
+    //   phone: state.phone,
+    };
   },
   (dispatch) => {
     return bindActionCreators(

@@ -8,20 +8,29 @@ import store from "./store"
 import "./index.css";
 
 store.dispatch({
-  type: "USER_NAME_ERROR_ON",
+  type: "SET_PHONE",
+  payload: '9676348120',
 })
 
 store.dispatch({
-  type: "USER_SURNAME_ERROR_ON",
+  type: "SUBMIT_FORM",
 })
 
-store.dispatch({
-  type: "PROFESSION_ERROR_ON",
-})
-
-store.dispatch({
-  type: "PHONE_ERROR_ON",
-})
+// store.dispatch({
+//   type: "USER_NAME_ERROR_ON",
+// })
+//
+// store.dispatch({
+//   type: "USER_SURNAME_ERROR_ON",
+// })
+//
+// store.dispatch({
+//   type: "PROFESSION_ERROR_ON",
+// })
+//
+// store.dispatch({
+//   type: "PHONE_ERROR_ON",
+// })
 
 // store.dispatch({
 //   type: "NEXT_PROFESSION",

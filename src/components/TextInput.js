@@ -47,6 +47,12 @@ export default class TextInput extends Component {
     }
   }
 
+  // componentDidMount() {
+  //   if (this.props.error) {
+  //    React.findDOMNode(this.refs[this.props.id]).focus();
+  //   }
+  // }
+
   render() {
     // console.log('Render TextInput: ',this.props);
     return (
@@ -64,6 +70,7 @@ export default class TextInput extends Component {
           placeholder={this.props.placeholder}
           onKeyDown={this.handleKeyPress.bind(this)}
           onBlur={this.handleBlur.bind(this)}
+          ref={this.props.id}
         />
       </FormGroup>
     );

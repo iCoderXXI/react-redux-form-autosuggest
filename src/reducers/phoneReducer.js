@@ -10,26 +10,24 @@ const phoneFormatRE = {
   5: /(.{0})(.{2})(.{2})(.{2})/,
 }
 
-const phoneFormat = (rawPhone, phoneCode) => {
+
+export const phoneClean = (rawPhone, phoneCode) => {
   const pc = '' + phoneCode;
   const maxLength = PHONE_LENGTH_MAX-pc.length;
-  const phoneRe = phoneFormatRE[pc.length]
   let phone = rawPhone.replace(/[^\d]+/gi, '');
-  console.log(
-    '['+pc+']',
-    '['+maxLength+' - '+phone.length+']',
-    '['+rawPhone+']',
-    '['+phone+']'
-  );
   if (phone.length>maxLength) {
     phone = phone.substring(0,maxLength);
   }
-  console.log('['+phone+']')
-  phone = (phone + '            ').replace(
-    phoneRe,
-    '$1 $2 $3 $4'
-  ).trim();
-  console.log('['+phone+']');
+  return phone;
+}
+
+
+const phoneFormat = (rawPhone, phoneCode) => {
+  const pc = '' + phoneCode;
+  let phone = phoneClean(rawPhone, phoneCode);
+  const phoneRe = phoneFormatRE[pc.length]
+  phone = (phone + '            ')
+    .replace(phoneRe, '$1 $2 $3 $4').trim();
   return phone;
 }
 
