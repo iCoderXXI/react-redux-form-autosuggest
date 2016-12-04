@@ -6,7 +6,8 @@ import {
   prevProfession,
   nextProfession,
   selectCurrentProfession,
-  cancelProfession
+  cancelProfession,
+  professionErrorOff,
 } from '../../actions/professionActions';
 
 import TextInput from '../../components/TextInput';
@@ -31,6 +32,7 @@ export default connect(
         onKeyENTER: selectCurrentProfession,
         onKeyESC: cancelProfession,
         onBlur: cancelProfession,
+        handleBlur: professionErrorOff,
       }, dispatch
     );
   }

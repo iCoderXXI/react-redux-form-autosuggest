@@ -8,7 +8,7 @@ const validateForm = (state) => {
     return {...state, user: {...state.user, errorName: true} }
   }
 
-  const userSurname = ''+state.user.surName.trim();
+  const userSurname = ''+state.user.surname.trim();
   if(userSurname.length<2) {
     return {...state, user: {...state.user, errorSurname: true} }
   }

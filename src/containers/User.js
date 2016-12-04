@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Row, Col} from 'react-bootstrap';
 
-import { setUserName, setUserSurname } from '../actions/userActions';
+import { setUserName, setUserSurname, userNameErrorOff, userSurnameErrorOff } from '../actions/userActions';
 import TextInput from '../components/TextInput';
 
 export const UserName = connect(
@@ -18,7 +18,10 @@ export const UserName = connect(
   },
   (dispatch) => {
     return bindActionCreators(
-      {inputChange: setUserName}, dispatch
+      {
+        inputChange: setUserName,
+        handleBlur: userNameErrorOff
+      }, dispatch
     );
   }
 )(TextInput);
@@ -26,7 +29,7 @@ export const UserName = connect(
 export const UserSurname = connect(
   (state) => {
     return {
-      text: state.user.surName,
+      text: state.user.surname,
       id: 'surname',
       label: 'ФАМИЛИЯ',
       placeholder: 'Введите фамилию',
@@ -35,7 +38,10 @@ export const UserSurname = connect(
   },
   (dispatch) => {
     return bindActionCreators(
-      {inputChange: setUserSurname}, dispatch
+      {
+        inputChange: setUserSurname,
+        handleBlur: userSurnameErrorOff
+      }, dispatch
     );
   }
 )(TextInput);

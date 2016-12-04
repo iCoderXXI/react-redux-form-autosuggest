@@ -6,7 +6,7 @@ export default (state=initialState.user, action) => {
         return {...state, name: action.payload}
 
         case 'SET_USER_SURNAME':
-          return {...state, surName: action.payload}
+          return {...state, surname: action.payload}
 
       case 'USER_NAME_ERROR_ON':
         return {...state, errorName: true}

@@ -22,10 +22,15 @@ export default class PhoneInput extends Component {
     }
   }
   componentDidUpdate() {
-    console.log(this);
+    // console.log(this);
     if (this.props.error) {
-      console.log(this);
+      // console.log(this);
       ReactDOM.findDOMNode(this.refs[this.props.id]).focus();
+    }
+  }
+  handleBlur(e) {
+    if (typeof this.props.handleBlur === "function") {
+      this.props.handleBlur();
     }
   }
   render() {
@@ -48,6 +53,7 @@ export default class PhoneInput extends Component {
                 onChange={this.phoneChange.bind(this)}
                 id={this.props.id}
                 ref={this.props.id}
+                onBlur={this.handleBlur.bind(this)}
               />
             </InputGroup>
           </FormGroup>

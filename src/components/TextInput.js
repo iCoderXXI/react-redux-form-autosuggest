@@ -21,6 +21,11 @@ export default class TextInput extends Component {
       that.handleEvent(evt, 'onBlur', false);
     }
     setTimeout( deferred, 1000, e, this );
+
+    if (typeof this.props.handleBlur === "function") {
+      this.props.handleBlur();
+    }
+
     return true;
   }
 
