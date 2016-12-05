@@ -16,4 +16,7 @@
 
 С флагами следующий нюанс: необходимо либо линкануть `./node_modules/react-flags/vendor/flags` в `./public/img/flags`, либо просто скопировать.
 
-Для Linux систем можно воспользоваться командой `ln -s ./node_modules/react-flags/vendor/flags ./public/img/flags`
+* Флаги пришлось скопировать, чтобы на git pages опубликовать.
+* Пришлось пофиксить путь до папки с флагами в `node_modules/react-flags/lib/react-flags.js` в строке 130 `basePath: "img/flags",` для возможности публикации проекта не в корневом урле сервера
+
+Для Linux систем можно воспользоваться командой `ln -s ./node_modules/react-flags/vendor/flags ./public/img/flags` (не актуально)
