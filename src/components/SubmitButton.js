@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Alert } from 'react-bootstrap';
 
 export default class SubmitButton extends Component {
   handleSubmit(e) {
@@ -11,8 +11,15 @@ export default class SubmitButton extends Component {
   }
 
   render() {
-    return (
-      <div className="text-center">
+    let content;
+    if (this.props.success) {
+      content = (
+        <Alert bsStyle="success">
+          Данные успешно отправлены.
+        </Alert>
+      );
+    } else {
+      content = (
         <Button
           bsStyle="primary"
           bsSize="large"
@@ -20,6 +27,11 @@ export default class SubmitButton extends Component {
         >
           Зарегистрироваться
         </Button>
+      );
+    }
+    return (
+      <div className="text-center">
+        {content}
       </div>
     );
   }

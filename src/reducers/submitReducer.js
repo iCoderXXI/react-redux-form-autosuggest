@@ -14,7 +14,7 @@ const validateForm = (state) => {
   }
 
   const profession = ''+state.profession.val.trim();
-  if(profession.length<4) {
+  if(profession.length<3) {
     return {
       ...state,
       profession: {
@@ -31,7 +31,17 @@ const validateForm = (state) => {
       ...state,
       phone: {
         ...state.phone,
-        errorPhone: true
+        errorPhone: true,
+      }
+    }
+  }
+
+  return {
+    ...state,
+    submit: {
+      submit: {
+        ...state.submit.submit,
+        success: true,
       }
     }
   }

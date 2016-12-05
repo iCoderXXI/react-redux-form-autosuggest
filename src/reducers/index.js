@@ -9,6 +9,7 @@ const combinedReducers = combineReducers({
   user: userReducer,
   phone: phoneReducer,
   profession: professionReducer,
+  submit: submitReducer,
 });
 
 export default (state, action) => {
